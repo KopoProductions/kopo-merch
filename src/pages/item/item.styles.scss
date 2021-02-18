@@ -1,0 +1,20 @@
+@import '../../assets/mixins/mixins.scss';
+
+.item-page {
+
+  &__item-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+}
+
+@include tablet-p {
+  .item-page {
+
+    &__item-info {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

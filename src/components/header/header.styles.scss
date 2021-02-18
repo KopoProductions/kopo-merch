@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color: #FFF;
+
+    &__menu {
+      width: 30px;
+    }
+
+     &__logo {
+         height: 40px;
+         margin: 2.5px 0;
+         width: 126px;
+     }
+
+     &__cart {
+      width: 30px;
+      margin: auto 6.9px auto -6.9px;
+     }
+}

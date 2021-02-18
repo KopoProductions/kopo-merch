@@ -1,0 +1,37 @@
+@import '../../assets/mixins/mixins.scss';
+
+.collection-preview {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  &__title {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  &__items {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    
+  }
+}
+
+@include tablet-p {
+  .collection-preview {
+
+    &__items {
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

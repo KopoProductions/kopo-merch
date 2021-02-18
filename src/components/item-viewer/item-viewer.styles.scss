@@ -1,0 +1,41 @@
+@import '../../assets/mixins/mixins.scss';
+
+.item-viewer {
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+
+  &__main {
+    width: 70%;
+    height: 500px;
+    padding: 0 15px 0 0;
+
+    &__slide {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__thumbs {
+    display: flex;
+    width: 30%;
+    height: 500px;
+    padding: 0 15px;
+    overflow: hidden;
+
+    &__thumb {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@include tablet-p {
+  .item-viewer {
+    width: calc(50% + 15px);
+  }
+}

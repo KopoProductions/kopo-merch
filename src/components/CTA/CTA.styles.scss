@@ -1,0 +1,74 @@
+.CTA {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #808080;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  overscroll-behavior-x: hidden;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  // &:before {
+  //   content: "test";
+  // }
+
+  &:hover {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+  }
+}
+
+.CTAExpandable{
+  transition: ease-out 0.3s;
+  text-align: left;
+  padding-left: 10px;
+  width: 200px;
+
+
+  &:hover{
+    width: 230px;
+  }
+}
+
+.CTASmall {
+  display: inline-flex;
+  width: auto;
+  margin: 0;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+  vertical-align: bottom;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.Collections {
+  margin: 0 auto 10px;
+}
+
+.CartButton {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.CTAInstagram {
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.CTAaddToCart {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+}

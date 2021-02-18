@@ -1,0 +1,74 @@
+@import '../../assets/mixins/mixins.scss';
+
+.subscriber {
+  background-color: #E4E4E4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 140px;
+
+  &__container {
+    margin: auto;
+    text-align: center;
+    
+    &__title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__sub-title {
+      font-size: 9px;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+
+    &__email-subscriber {
+        height: 17px;
+
+      &__input {
+        height: 100%;
+        font-size: 6px;
+        padding-left: 6px;
+        background-color: #FFF;
+        user-select: none;
+        border-radius: 0px;
+        border: none;
+        outline: none;
+        
+        &:placeholder-shown {
+          color: #757575;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .subscriber {
+    height: 340px;
+
+    &__container {
+      &__title {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+
+      &__sub-title {
+        font-size: 22px;
+        margin-bottom: 45px;
+      }
+
+      &__email-subscriber {
+        &__input {
+          height: 40px;
+          font-size: 20px;
+
+          &:placeholder-shown {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

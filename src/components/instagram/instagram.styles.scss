@@ -1,0 +1,71 @@
+@import '../../assets/mixins/mixins.scss';
+
+.instagram {
+  background-color: #8C96B9;
+  height: 150px;
+  width: 100% ;
+  display: flex;
+
+  &__container {
+    margin: auto 13px auto auto;
+    width: 142px;
+    height: 110px;
+    background-color: #FFF;
+    text-align: left;
+    padding: 4px 12px 14PX;
+
+    &__handler {
+      font-size: 9px;
+      margin-bottom: 8px;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 12px;
+      margin-bottom: 3px;
+      line-height: 16px;
+    }
+
+    &__sub-title {
+      font-size: 8px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    &__CTA-container {
+      height: 15px;
+      width: 88px;
+    }
+
+  }
+}
+
+@include desktop {
+  .instagram {
+    height: 358px;
+
+    &__container {
+      margin-right: 47px;
+      width: 320px;
+      height: 247px;
+      padding:  14px 40px;
+
+      &__handler {
+        font-size: 20px;
+        margin-bottom: 21px;
+      }
+
+      &__title {
+       font-size: 24px;
+       margin-bottom: 24px;
+       line-height: 32px;
+      }
+
+      &__sub-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+}

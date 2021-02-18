@@ -1,0 +1,79 @@
+@import '../../assets/mixins/mixins.scss';
+
+.footer {
+  display: flex;
+  padding: 18px 20px;
+  justify-content: space-between;
+
+  &__social-media {
+    display: inline-flex;
+    flex-direction: column;
+
+    &__logo {
+      width: 64px;
+      height: 20px;
+      margin-bottom: 7px;
+    }
+
+    &__icons-container {
+      display: inline-flex;
+      margin: 0 auto;
+
+      &__icon {
+        width: 12px;
+        height: 12px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        margin: 0 2.5px;
+      }
+    }
+  }
+
+  &__links-column {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+
+    &__title {
+      font-size: 9px;
+      font-weight: normal;
+    }
+
+    &__link {
+      font-size: 6px;
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    height: 317px;
+    padding-right: 188px;
+
+    &__social-media {
+      margin: auto 0;
+      margin-left: 81px;
+      &__logo {
+        width: 195px;
+        height: auto;
+      }
+
+      &__icons-container {
+        &__icon {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    &__links-column {
+      margin: auto 0;
+      &__title {
+        font-size: 20px;
+      }
+
+      &__link {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../assets/mixins/mixins.scss';
+
+.shop-now {
+  display: flex;
+  flex-direction: column;
+  margin: 29px 0;
+
+  &__title {
+    margin: 0 auto 33px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__collections-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    &__collection-item {
+      width: 159px;
+      height: 113px;
+      background-color: pink;
+      display: inline-flex;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__description {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 600;
+        text-shadow: 0 6px 9px;
+        height: fit-content;
+        margin: auto;
+        user-select: none;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .shop-now {
+    margin-top: 89px;
+    margin-bottom: 92px;
+
+     &__title {
+       font-size: 27px;
+     }
+
+     &__collections-container {
+       gap: 115px;
+
+      &__collection-item {
+        width: 425px;
+        height: 400px;
+      }
+     }
+  }
+}
