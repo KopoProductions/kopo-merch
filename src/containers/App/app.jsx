@@ -18,10 +18,10 @@ function App() {
     <section className="App">
       <Header />
       <Switch >
-        <Route path='/' exact component={Homepage} />
-        <Route path='/shop' exact component={Shop} />
-        <Route path='/shop/:collection' exact component={Collections} />
-        <Route path='/shop/:collection/:item' exact component={Item} />
+        <Route path='/kopo-merch/' exact component={Homepage} />
+        <Route path='/kopo-merch/shop' exact component={Shop} />
+        <Route path='/kopo-merch/shop/:collection' exact component={Collections} />
+        <Route path='/kopo-merch/shop/:collection/:item' exact component={Item} />
       </Switch>
       <Subscriber />
       <Footer />

@@ -5,19 +5,19 @@ import './shop-now.styles.scss';
 const ShopNow = () => {
     return (
         <section className='shop-now' >
-            <Link to='/shop' className='shop-now__title' >SHOP NOW</Link>
+            <Link to='/kopo-merch/shop' className='shop-now__title' >SHOP NOW</Link>
             <section className='shop-now__collections-container' >
               <section className='shop-now__collections-container__collection-item' >
-                <Link to='/shop/tops' className='shop-now__collections-container__collection-item__description' >Tops</Link>
+                <Link to='/kopo-merch/shop/tops' className='shop-now__collections-container__collection-item__description' >Tops</Link>
               </section>
               <section className='shop-now__collections-container__collection-item' >
-                <p className='shop-now__collections-container__collection-item__description' >Sweaters</p>
+                <Link to='/kopo-merch/shop/sweaters' className='shop-now__collections-container__collection-item__description' >Sweaters</Link>
               </section>
               <section className='shop-now__collections-container__collection-item' >
-                <p className='shop-now__collections-container__collection-item__description' >Bottoms</p>
+                <Link to='/kopo-merch/shop/bottoms' className='shop-now__collections-container__collection-item__description' >Bottoms</Link>
               </section>
               <section className='shop-now__collections-container__collection-item' >
-                <p className='shop-now__collections-container__collection-item__description' >Towels</p>
+                <Link to='/kopo-merch/shop/towels' className='shop-now__collections-container__collection-item__description' >Towels</Link>
               </section>
             </section>
         </section>
