@@ -46,7 +46,7 @@
         margin-left: 5px;
       }
 
-      &.active {
+      &.size-is-active {
         border: solid black 1px;
       }
     }
@@ -62,16 +62,34 @@
     margin-bottom: 15px;
 
     &__color-selector {
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
+      padding: 0px;
       border-radius: 50%;
+      display: inline-flex;
+      text-align: center;
+      align-items: center;
+      align-self: center;
+      align-content: center;
 
-      &.active {
-        border: solid 1px black;
+      &.color-is-active {
+        border: solid 2px black;
+      }
+
+      &:not(:first-child) {
+        margin-left: 5px;
       }
 
       &:hover {
         cursor: pointer;
+      }
+
+      &__inner {
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        border: solid 1px gray;
+        border-radius: 50%;
       }
     }
   }

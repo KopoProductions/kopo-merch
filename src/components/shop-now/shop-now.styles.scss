@@ -40,6 +40,23 @@
   }
 }
 
+@include tablet-p {
+  .shop-now {
+
+    &__collections-container {
+
+      &__collection-item {
+        width: 222px;
+        height: 158px;
+
+        &__description {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
 @include desktop {
   .shop-now {
     margin-top: 89px;

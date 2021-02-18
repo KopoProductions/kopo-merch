@@ -7,7 +7,7 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter >
+  <BrowserRouter basename='/kopo-merch' >
     <ScrollToTop />
     <App />
   </BrowserRouter>,

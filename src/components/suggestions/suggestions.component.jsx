@@ -41,7 +41,7 @@ const Suggestions = () => {
     <section className='suggestions' >
       <h2 className='suggestions__title' >YOU MAY ALSO LIKE</h2>
       <Swiper
-      slidesPerView={2}
+      slidesPerView={4}
       spaceBetween={15}
       loop
       freeMode

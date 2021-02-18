@@ -12,9 +12,9 @@ const CollectionPreview = ({ collectionId, path, collectionName, items }) => {
       <section className='collection-preview__items' >
         {
           items.map(item => {
-            const {id, name, price, url} = item;
+            const {id, name, price, url, sizes, colors} = item;
             return (
-              <Link key={id} to={`${path}/${id}`} >
+              <Link key={id} to={`${path}/${id}/${sizes[0]}/${colors[0]}`} >
                 <ItemCard id={id} name={name} priceTag={price} imageUrl={url} />
               </Link>
             )

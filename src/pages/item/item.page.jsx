@@ -1,46 +1,48 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import ItemViewer from '../../components/item-viewer/item-viewer.component';
 import ItemDescription from '../../components/item-description/item-description.component';
 import Suggestions from '../../components/suggestions/suggestions.component';
 
-import img1 from '../../assets/images/hoodieBasket.png';
-import img2 from '../../assets/images/hoodieGirl.png';
-import img3 from '../../assets/images/pinkTopOrange.png';
-import img4 from '../../assets/images//yogaPantsOrange.png';
+import top1 from '../../assets/images/hoodieBasket.png';
+import top2 from '../../assets/images/hoodieGirl.png';
+import top3 from '../../assets/images/pinkTopOrange.png';
+import top4 from '../../assets/images//yogaPantsOrange.png';
 
 import './item.styles.scss';
 
 const imgDB = [
   {
     id: 'top1',
-    imgUrl: img1
+    imgUrl: top1
   },
   {
     id: 'top2',
-    imgUrl: img2
+    imgUrl: top2
   },
   {
     id: 'top3',
-    imgUrl: img3
+    imgUrl: top3
   },
   {
     id: 'top4',
-    imgUrl: img4
+    imgUrl: top4
   },
 ];
 
-const Item = () => {
+const Item = ({ match }) => {
+  console.log(match);
+  const { color, size, item, collection } = match.params;
   return (
     <section className='item-page' >
       <section className='item-page__item-info' >
         <ItemViewer images={imgDB} />
-        <ItemDescription />
-        <Suggestions />
+        <ItemDescription color={color} size={size} id={item} collection={collection} />
       </section>
-      
+      <Suggestions />
     </section>
   );
 };
 
-export default Item;
+export default withRouter(Item);

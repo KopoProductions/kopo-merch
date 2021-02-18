@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <section className='footer' >
       <section className='footer__social-media' >
-        <Link to='/' className='footer__social-media__logo' >
+        <Link to='kopo-merch/' className='footer__social-media__logo' >
           <Logo />
         </Link>
         <section className='footer__social-media__icons-container'>
@@ -22,23 +22,23 @@ const Footer = () => {
 
       <section className='footer__links-column' >
         <h2 className='footer__links-column__title' >Menu</h2>
-        <Link to='/' className='footer__links-column__link' >Blog</Link>
-        <Link to='/' className='footer__links-column__link' >Contact Us</Link>
-        <Link to='/' className='footer__links-column__link' >Help Center</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Blog</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Contact Us</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Help Center</Link>
       </section>
 
       <section className='footer__links-column' >
         <h2 className='footer__links-column__title' >Company</h2>
-        <Link to='/' className='footer__links-column__link' >Shipping & Returns</Link>
-        <Link to='/' className='footer__links-column__link' >About Us</Link>
-        <Link to='/' className='footer__links-column__link' >Terms & Conditions</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Shipping & Returns</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >About Us</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Terms & Conditions</Link>
       </section>
 
       <section className='footer__links-column' >
         <h2 className='footer__links-column__title' >Links</h2>
-        <Link to='/' className='footer__links-column__link' >IG Repost</Link>
-        <Link to='/' className='footer__links-column__link' >Shop Instagram</Link>
-        <Link to='/' className='footer__links-column__link' >Privacy Policy</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >IG Repost</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Shop Instagram</Link>
+        <Link to='kopo-merch/' className='footer__links-column__link' >Privacy Policy</Link>
       </section>
     </section>
   );
