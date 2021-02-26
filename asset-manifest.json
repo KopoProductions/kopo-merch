@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/kopo-merch/static/css/main.c05fd87f.chunk.css",
-    "main.js": "/kopo-merch/static/js/main.77e1cb84.chunk.js",
-    "main.js.map": "/kopo-merch/static/js/main.77e1cb84.chunk.js.map",
+    "main.css": "/kopo-merch/static/css/main.6dab8856.chunk.css",
+    "main.js": "/kopo-merch/static/js/main.0b803273.chunk.js",
+    "main.js.map": "/kopo-merch/static/js/main.0b803273.chunk.js.map",
     "runtime-main.js": "/kopo-merch/static/js/runtime-main.510497ca.js",
     "runtime-main.js.map": "/kopo-merch/static/js/runtime-main.510497ca.js.map",
     "static/css/2.b7e75c60.chunk.css": "/kopo-merch/static/css/2.b7e75c60.chunk.css",
@@ -14,7 +14,7 @@
     "service-worker.js": "/kopo-merch/service-worker.js",
     "service-worker.js.map": "/kopo-merch/service-worker.js.map",
     "static/css/2.b7e75c60.chunk.css.map": "/kopo-merch/static/css/2.b7e75c60.chunk.css.map",
-    "static/css/main.c05fd87f.chunk.css.map": "/kopo-merch/static/css/main.c05fd87f.chunk.css.map",
+    "static/css/main.6dab8856.chunk.css.map": "/kopo-merch/static/css/main.6dab8856.chunk.css.map",
     "static/js/2.d8f434ae.chunk.js.LICENSE.txt": "/kopo-merch/static/js/2.d8f434ae.chunk.js.LICENSE.txt",
     "static/media/cart-icon.1082b479.svg": "/kopo-merch/static/media/cart-icon.1082b479.svg",
     "static/media/facebook.cc6bc3ff.svg": "/kopo-merch/static/media/facebook.cc6bc3ff.svg",
@@ -23,14 +23,14 @@
     "static/media/hero-slider-3.c98d36e7.png": "/kopo-merch/static/media/hero-slider-3.c98d36e7.png",
     "static/media/hero-slider-4.f4ac0970.png": "/kopo-merch/static/media/hero-slider-4.f4ac0970.png",
     "static/media/instagram.811d5de6.svg": "/kopo-merch/static/media/instagram.811d5de6.svg",
-    "static/media/logo.136d4f83.svg": "/kopo-merch/static/media/logo.136d4f83.svg",
+    "static/media/logo.0bb2f853.png": "/kopo-merch/static/media/logo.0bb2f853.png",
     "static/media/pinterest.e0130249.svg": "/kopo-merch/static/media/pinterest.e0130249.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.510497ca.js",
     "static/css/2.b7e75c60.chunk.css",
     "static/js/2.d8f434ae.chunk.js",
-    "static/css/main.c05fd87f.chunk.css",
-    "static/js/main.77e1cb84.chunk.js"
+    "static/css/main.6dab8856.chunk.css",
+    "static/js/main.0b803273.chunk.js"
   ]
 }
