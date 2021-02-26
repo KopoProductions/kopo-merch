@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/kopo-merch/static/css/main.005a0cc7.chunk.css",
-    "main.js": "/kopo-merch/static/js/main.3b4654c2.chunk.js",
-    "main.js.map": "/kopo-merch/static/js/main.3b4654c2.chunk.js.map",
+    "main.js": "/kopo-merch/static/js/main.bdadbcd3.chunk.js",
+    "main.js.map": "/kopo-merch/static/js/main.bdadbcd3.chunk.js.map",
     "runtime-main.js": "/kopo-merch/static/js/runtime-main.17a103f1.js",
     "runtime-main.js.map": "/kopo-merch/static/js/runtime-main.17a103f1.js.map",
     "static/css/2.e9aa7207.chunk.css": "/kopo-merch/static/css/2.e9aa7207.chunk.css",
@@ -31,6 +31,6 @@
     "static/css/2.e9aa7207.chunk.css",
     "static/js/2.19436aab.chunk.js",
     "static/css/main.005a0cc7.chunk.css",
-    "static/js/main.3b4654c2.chunk.js"
+    "static/js/main.bdadbcd3.chunk.js"
   ]
 }
