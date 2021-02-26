@@ -44,6 +44,40 @@
   }
 }
 
+@include tablet-p {
+  .footer {
+    height: 215px;
+    padding-right: 74px;
+
+    &__social-media {
+      margin: auto 0;
+      margin-left: 55px;
+      &__logo {
+        width: 140px;
+        height: auto;
+      }
+
+      &__icons-container {
+        &__icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &__links-column {
+      margin: auto 0;
+      &__title {
+        font-size: 12px;
+      }
+
+      &__link {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
 @include desktop {
   .footer {
     height: 317px;

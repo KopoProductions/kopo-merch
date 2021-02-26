@@ -24,8 +24,8 @@ const ItemViewer = ({images}) => {
       >
         {
           images.map(item => {
-            const { id, imgUrl } = item;
-            return (<SwiperSlide key={`thumbnail-${id}`} className='item-viewer__thumbs__thumb' style={{backgroundImage: `url(${imgUrl})`}} ></SwiperSlide>)
+            let key = 0;
+            return (<SwiperSlide key={`thumbnail-${key}`} className='item-viewer__thumbs__thumb' style={{backgroundImage: `url(${item})`}} ></SwiperSlide>)
           })
         }
       </Swiper>
@@ -39,8 +39,8 @@ const ItemViewer = ({images}) => {
       >
         {
           images.map(item => {
-            const { id, imgUrl } = item;
-            return (<SwiperSlide key={id} className='item-viewer__main__slide' style={{backgroundImage: `url(${imgUrl})`}} />)
+            let key = 0
+            return (<SwiperSlide key={key} className='item-viewer__main__slide' style={{backgroundImage: `url(${item})`}} />)
           })
         }
       </Swiper>

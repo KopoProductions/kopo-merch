@@ -1,19 +1,36 @@
 import React from 'react';
+import logo from '../../assets/images/logo.png';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {ReactComponent as Logo} from '../../assets/images/logo.svg';
 import {ReactComponent as CartIcon} from '../../assets/images/cart-icon.svg';
 import './header.styles.scss';
 
-const Header = () => {
+import CartModal from '../../components/cart-modal/cart-modal.component';
+
+import { openCartModal, closeCartModal } from '../../redux/modal/modal.actions';
+
+const Header = ({ isCartModalOpen, openCartModal, closeCartModal }) => {
     return (
         <header className='header' >
             <section className='header__menu' />
             <Link to='/' >
-              <Logo className='header__logo' />
+              <img className='header__logo' src={logo} />
             </Link>
-            <CartIcon className='header__cart' />
+            <CartIcon onClick={openCartModal} className='header__cart' />
+            {
+              isCartModalOpen ? <CartModal /> : null
+            }
         </header>
     );
 };
 
-export default Header;
+const mapDispatchToProps = (dispatch) => ({
+  openCartModal: () => dispatch(openCartModal()),
+  closeCartModal: () => dispatch(closeCartModal())
+})
+
+const mapStateToProps = ({ cartModal: { cartModalIsOpen } }) => ({
+  isCartModalOpen: cartModalIsOpen
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

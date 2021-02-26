@@ -40,6 +40,40 @@
   }
 }
 
+@include tablet-p {
+  .instagram {
+    height: 213px;
+
+    &__container {
+      margin-right: 28px;
+      width: 192px;
+      height: 148px;
+      padding:  14px 17px;
+
+      &__handler {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      &__title {
+       font-size: 16px;
+       margin-bottom: 7px;
+       line-height: 21px;
+      }
+
+      &__sub-title {
+        font-size: 10px;
+        margin-bottom: 10px;
+      }
+
+      &__CTA-container {
+        height: 19px;
+        width: 110px;
+      }
+    }
+  }
+}
+
 @include desktop {
   .instagram {
     height: 358px;

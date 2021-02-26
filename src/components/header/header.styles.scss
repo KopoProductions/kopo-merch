@@ -12,12 +12,17 @@
 
      &__logo {
          height: 40px;
-         margin: 2.5px 0;
+         margin: 2.5px 0 0;
          width: 126px;
      }
 
      &__cart {
+      height: 40px;
       width: 30px;
       margin: auto 6.9px auto -6.9px;
+
+      &:hover {
+        cursor: pointer;
+      }
      }
 }

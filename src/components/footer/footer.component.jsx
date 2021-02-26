@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as Logo} from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 import {ReactComponent as Facebook} from '../../assets/images/facebook.svg';
 import {ReactComponent as Instagram} from '../../assets/images/instagram.svg';
 import {ReactComponent as Pinterest} from '../../assets/images/pinterest.svg';
@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <section className='footer' >
       <section className='footer__social-media' >
-        <Link to='/' className='footer__social-media__logo' >
-          <Logo />
+        <Link to='/' >
+          <img className='footer__social-media__logo'src={logo} />
         </Link>
         <section className='footer__social-media__icons-container'>
           <Facebook className='footer__social-media__icons-container__icon' />

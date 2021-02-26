@@ -10,7 +10,7 @@ const Subscriber = () => {
         <h3 className='subscriber__container__sub-title' >Subscribe to get 10% off from your first purchase</h3>
         <section className='subscriber__container__email-subscriber' >
           <input className='subscriber__container__email-subscriber__input' placeholder='Enter your E-mail' />
-          <CTA small ><p>&#8594;</p></CTA>
+          <section className='subscriber__container__email-subscriber__CTA-container' ><CTA small ><p>&#8594;</p></CTA></section>
         </section>
       </section>
     </section>

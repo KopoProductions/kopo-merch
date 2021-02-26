@@ -1,42 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import { selectCollection } from '../../redux/shop/shop.selector';
+
 import { Swiper, SwiperSlide} from 'swiper/react';
 import ItemCard from '../item-card/item-card.component';
 
-import top1 from '../../assets/images/hoodieBasket.png';
-import top2 from '../../assets/images/hoodieGirl.png';
-import top3 from '../../assets/images/pinkTopOrange.png';
-import top4 from '../../assets/images/topWall.png';
-
 import './suggestions.styles.scss';
 
-const collectionsDB = [
-  {
-    id: 'top1',
-    name: 'Top 1',
-    price: '$100',
-    url: top1
-  },
-  {
-    id: 'top2',
-    name: 'Top 2',
-    price: '$100',
-    url: top2
-  },
-  {
-    id: 'top3',
-    name: 'Top 3',
-    price: '$100',
-    url: top3
-  },
-  {
-    id: 'top4',
-    name: 'Top 4',
-    price: '$100',
-    url: top4
-  },
-]
 
-const Suggestions = () => {
+const Suggestions = ({ suggestions, collectionId }) => {
+  const suggestionsValue = Object.values(suggestions.items);
+  console.log(suggestionsValue);
   return (
     <section className='suggestions' >
       <h2 className='suggestions__title' >YOU MAY ALSO LIKE</h2>
@@ -48,11 +24,13 @@ const Suggestions = () => {
       className='suggestions__swiper'
       >
         {
-          collectionsDB.map(item => {
-            const { id, name, price, url } = item
+          suggestionsValue.map(item => {
+            const { id, name, price, url, sizes, colors } = item
             return (
               <SwiperSlide key={id} >
-                <ItemCard id={id} name={name} priceTag={price} imageUrl={url} />
+                <Link to={`/shop/${collectionId}/${id}/${sizes[2]}/${colors[0]}`} >
+                  <ItemCard id={id} name={name} priceTag={price} imageUrl={url} />
+                </Link>
               </SwiperSlide>
             )
           })
@@ -62,4 +40,8 @@ const Suggestions = () => {
   );
 };
 
-export default Suggestions;
+const mapStateToProps = (state, ownProps) => ({
+  suggestions: selectCollection(ownProps.collectionId)(state)
+});
+
+export default connect(mapStateToProps)(Suggestions);

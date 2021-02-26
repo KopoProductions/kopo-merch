@@ -1,0 +1,109 @@
+@import '../../assets/mixins/mixins.scss';
+
+.cart-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  backdrop-filter: blur(5px);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__container {
+    position: fixed;
+    right: 0;
+    background-color: #FFF;
+    height: 100vh;
+    width: 80%;
+    
+    &:hover {
+      cursor: default;
+    }
+
+    &__top {
+      padding: 25px;
+      display: flex;
+      height: 10vh;
+      width: 100%;
+      justify-content: space-between;
+
+      &__title {
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      &__X {
+        font-size: 26px;
+        font-weight: 600;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__items {
+      padding: 5px 0;
+      height: 75vh;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+
+      &__empty {
+        font-size: 38px;
+        text-align: center;
+        margin: 50px auto auto;
+      }
+    }
+
+    &__bottom {
+      height: 20vh;
+      border-top: 1px solid #000;
+      display: flex;
+      flex-direction: column;
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 15px 0;
+
+        &__title {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        &__total {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+      &__button {
+        margin: 0 auto;
+        width: 80%;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@include tablet-p {
+  .cart-modal {
+    &__container {
+      width: 60%;
+    }
+  }
+}
+
+@include desktop {
+  .cart-modal {
+    &__container {
+      width: 30%;
+    }
+  }
+}

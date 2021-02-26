@@ -1,22 +1,24 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
 import ItemCard from '../item-card/item-card.component';
 
 import './collection-preview.styles.scss';
 
-const CollectionPreview = ({ collectionId, path, collectionName, items }) => {
+const CollectionPreview = ({ collection, path, history, match }) => {
+  const { id, items, name } = collection;
+  const itemsValue = Object.values(items);
   return (
-    <section id={collectionId} className='collection-preview' >
-      <Link to={path} className='collection-preview__title' >{collectionName}</Link>
+    <section id={id} className='collection-preview' >
+      <Link to={path} className='collection-preview__title' >{name}</Link>
       <section className='collection-preview__items' >
         {
-          items.map(item => {
-            const {id, name, price, url, sizes, colors} = item;
+          itemsValue.map(item => {
+            const {id, name, price, url, sizes, colors, description} = item;
             return (
-              <Link key={id} to={`${path}/${id}/${sizes[0]}/${colors[0]}`} >
-                <ItemCard id={id} name={name} priceTag={price} imageUrl={url} />
-              </Link>
+              <section key={id} onClick={() => history.push(`${path}/${id}/${sizes[2]}/${colors[0]}`)} >
+                <ItemCard id={id} name={name} priceTag={price} imageUrl={url} description={description} />
+              </section>
             )
           })
         }
@@ -25,4 +27,4 @@ const CollectionPreview = ({ collectionId, path, collectionName, items }) => {
   );
 };
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);

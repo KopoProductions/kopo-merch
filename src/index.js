@@ -1,16 +1,24 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import ScrollToTop from './components/scrollToTop/scrollToTop.component';
 import ReactDOM from 'react-dom';
 import App from './containers/App/app';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+import { store, persistor } from './redux/store';
+
 ReactDOM.render(
-  <BrowserRouter basename='/kopo-merch' >
-    <ScrollToTop />
-    <App />
-  </BrowserRouter>,
+  <Provider store={store} >
+    <HashRouter basename='/kopo-merch' >
+      <ScrollToTop />
+      <PersistGate persistor={persistor} >
+        <App />
+      </PersistGate>
+    </HashRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

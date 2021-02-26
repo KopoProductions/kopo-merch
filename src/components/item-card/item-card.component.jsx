@@ -7,7 +7,7 @@ const ItemCard = ({ id, name, priceTag, imageUrl }) => {
       <img className='item-card__img' src={imageUrl} alt={name} />
       <section className='item-card__info' >
         <p className='item-card__info__name' >{name}</p>
-        <p className='item-card__info__price' >{priceTag}</p>
+        <p className='item-card__info__price' >{`USD${(priceTag / 100).toFixed(2)}`}</p>
       </section>
     </section>
   );

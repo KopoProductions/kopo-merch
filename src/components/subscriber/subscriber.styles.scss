@@ -25,6 +25,9 @@
 
     &__email-subscriber {
         height: 17px;
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
 
       &__input {
         height: 100%;
@@ -38,6 +41,40 @@
         
         &:placeholder-shown {
           color: #757575;
+        }
+      }
+
+      &__CTA-container .CTA {
+        height: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@include tablet-p {
+  .subscriber {
+    height: 204px;
+
+    &__container {
+      &__title {
+        font-size: 30px;
+        margin-bottom: 14px;
+      }
+
+      &__sub-title {
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+
+      &__email-subscriber {
+          height: 24px;
+        &__input {
+          font-size: 9px;
+
+          &:placeholder-shown {
+            font-size: 9px;
+          }
         }
       }
     }
@@ -60,8 +97,8 @@
       }
 
       &__email-subscriber {
-        &__input {
           height: 40px;
+        &__input {
           font-size: 20px;
 
           &:placeholder-shown {

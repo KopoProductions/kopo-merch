@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {
   Accordion,
@@ -8,64 +9,31 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
+import { addCartItem } from '../../redux/cart/cart.actions';
+
 import CTA from '../CTA/CTA.component';
 import './item-description.styles.scss';
 
-import top1 from '../../assets/images/hoodieBasket.png';
-import top2 from '../../assets/images/hoodieGirl.png';
-import top3 from '../../assets/images/pinkTopOrange.png';
-import top4 from '../../assets/images/topWall.png';
-import itemPage from '../../pages/item/item.page';
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-const collectionsDB = [
-  {
-    id: 'tops',
-    name: 'TOPS',
-    collection: [
-      {
-        id: 'top1',
-        name: 'Top 1',
-        price: '$100',
-        url: top1,
-        sizes: ['s', 'm', 'l'],
-        colors: ['white', 'blue', 'black']
-      },
-      {
-        id: 'top2',
-        name: 'Top 2',
-        price: '$100',
-        url: top2,
-        sizes: ['s', 'm', 'l'],
-        colors: ['white', 'blue', 'black']
-      },
-      {
-        id: 'top3',
-        name: 'Top 3',
-        price: '$100',
-        url: top3,
-        sizes: ['s', 'm', 'l'],
-        colors: ['white', 'blue', 'black']
-      },
-      {
-        id: 'top4',
-        name: 'Top 4',
-        price: '$100',
-        url: top4,
-        sizes: ['s', 'm', 'l'],
-        colors: ['white', 'blue', 'black']
-      },
-    ]
-  }
-]
+const ItemDescription = ({ name, price, collection, id, description, colors, color, sizes, size, imgUrl, addItemToCart }) => {
 
-const ItemDescription = ({ collection, id, color, size }) => {
+  let itemToBeAdded = {
+    id: `${id}-${size}-${color}`,
+    color: color,
+    size: size,
+    url: imgUrl,
+    name,
+    price
+  };
 
-  const { sizes, colors } = collectionsDB[0].collection[0]
   return (
     <section className='item-description' >
-      <h2 className='item-description__title' >CrewNeck - Mango</h2>
-      <p className='item-description__price' >$14.00</p>
-      <p className='item-description__size-title' >Size</p>
+      <h2 className='item-description__title' >{ name }</h2>
+      <p className='item-description__price' >${(price / 100).toFixed(2)}</p>
+      <p className='item-description__size-title' >Size - {capitalizeFirstLetter(size)}</p>
       <section className='item-description__sizes' >
       {
         sizes.map(itemSize => {
@@ -73,7 +41,7 @@ const ItemDescription = ({ collection, id, color, size }) => {
         })
       }
       </section>
-      <p className='item-description__color-title'>Color - White</p>
+      <p className='item-description__color-title'>Color - {capitalizeFirstLetter(color)}</p>
       <section className='item-description__colors' >
       {
         colors.map(itemColor => {
@@ -84,7 +52,7 @@ const ItemDescription = ({ collection, id, color, size }) => {
       }
       </section>
       <section className='item-description__CTA-container' >
-        <CTA addToCart >Add To Cart</CTA>
+        <CTA onClick={() => addItemToCart(itemToBeAdded)} addToCart >Add To Cart</CTA>
       </section>
       <Accordion className='item-description__accordion' allowMultipleExpanded allowZeroExpanded >
         <AccordionItem className='item-description__accordion__item' >
@@ -92,23 +60,23 @@ const ItemDescription = ({ collection, id, color, size }) => {
             <AccordionItemButton className='item-description__accordion__item__heading__button' >Description</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className='item-description__accordion__item__pannel' >
-            <p>lkalalalla lasl alsf lasdflasl asl asld asl lasfdl s; ;</p>
+            <p>{description}</p>
           </AccordionItemPanel>
         </AccordionItem>
         <AccordionItem className='item-description__accordion__item' >
           <AccordionItemHeading aria-level={3} className='item-description__accordion__item__heading' >
-            <AccordionItemButton className='item-description__accordion__item__heading__button' >Description</AccordionItemButton>
+            <AccordionItemButton className='item-description__accordion__item__heading__button' >Size Chart</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className='item-description__accordion__item__pannel' >
-            <p>lkalalalla lasl alsf lasdflasl asl asld asl lasfdl s; ;</p>
+            <p></p>
           </AccordionItemPanel>
         </AccordionItem>
         <AccordionItem className='item-description__accordion__item' >
           <AccordionItemHeading aria-level={3} className='item-description__accordion__item__heading' >
-            <AccordionItemButton className='item-description__accordion__item__heading__button' >Description</AccordionItemButton>
+            <AccordionItemButton className='item-description__accordion__item__heading__button' >Shipping & Return</AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className='item-description__accordion__item__pannel' >
-            <p>lkalalalla lasl alsf lasdflasl asl asld asl lasfdl s; ;</p>
+            <p>You pay, we deliver. Don't like it? Return it.</p>
           </AccordionItemPanel>
         </AccordionItem>
       </Accordion>
@@ -116,4 +84,8 @@ const ItemDescription = ({ collection, id, color, size }) => {
   );
 };
 
-export default ItemDescription;
+const mapDispatchToProps = (dispatch) => ({
+  addItemToCart: (item) => dispatch(addCartItem(item))
+});
+
+export default connect(null, mapDispatchToProps)(ItemDescription);
