@@ -18,3 +18,9 @@
     }
   }
 }
+
+@include desktop {
+  .item-page {
+    padding: 0 166px;
+  }
+}

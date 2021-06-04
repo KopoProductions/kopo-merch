@@ -6,7 +6,7 @@ import './cart-modal.styles.scss';
 import CartItem from '../cart-item/cart-item.component';
 
 import { openCartModal, closeCartModal } from '../../redux/modal/modal.actions';
-import { selectCartContent, selectCartContentCount } from '../../redux/cart/cart.selector';
+import { selectCartContent, selectCartContentTotalPrice } from '../../redux/cart/cart.selector';
 
 const CartModal = ({ closeCartModal, cartContent, totalPrice, history }) => {
   return (
@@ -49,7 +49,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => ({
   cartContent: selectCartContent(state),
-  totalPrice: selectCartContentCount(state)
+  totalPrice: selectCartContentTotalPrice(state)
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartModal));

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import SwiperCore, { Thumbs } from 'swiper';
+import SwiperCore, { Thumbs, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/controller/controller.scss';
+import 'swiper/components/effect-fade/effect-fade.scss';
 import './item-viewer.styles.scss';
 
-SwiperCore.use([Thumbs]);
+SwiperCore.use([Thumbs, EffectFade]);
 
 const ItemViewer = ({images}) => {
 
@@ -36,6 +37,7 @@ const ItemViewer = ({images}) => {
         thumbs={{ swiper: thumbSwiper }}
         spaceBetween={16}
         slidesPerView={1}
+        effect='fade'
       >
         {
           images.map(item => {

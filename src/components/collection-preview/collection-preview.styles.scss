@@ -32,6 +32,21 @@
     &__items {
       width: 100%;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      & > section {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@include desktop {
+  .collection-preview {
+
+    &__items {
+      gap: 50px;
+      width: 80%;
     }
   }
 }

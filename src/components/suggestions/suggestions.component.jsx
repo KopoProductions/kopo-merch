@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -12,12 +12,28 @@ import './suggestions.styles.scss';
 
 const Suggestions = ({ suggestions, collectionId }) => {
   const suggestionsValue = Object.values(suggestions.items);
-  console.log(suggestionsValue);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState(2)
+  const listener = () => setInnerWidth(window.innerWidth)
+  window.addEventListener('resize', listener)
+  useEffect(() => {
+    if (innerWidth < 500) {
+      setSlides(2)
+    } else if (innerWidth < 1400) {
+      setSlides(4)
+    } else {
+      setSlides(6)
+    }
+    return function removeEventListener() {
+      window.removeEventListener('resize', listener)
+    }
+  }, [innerWidth])
+
   return (
     <section className='suggestions' >
       <h2 className='suggestions__title' >YOU MAY ALSO LIKE</h2>
       <Swiper
-      slidesPerView={4}
+      slidesPerView={slides}
       spaceBetween={15}
       loop
       freeMode

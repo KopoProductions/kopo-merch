@@ -24,6 +24,7 @@
     height: 500px;
     padding: 0 15px;
     overflow: hidden;
+    cursor: pointer;
 
     &__thumb {
       width: 100%;
@@ -37,5 +38,6 @@
 @include tablet-p {
   .item-viewer {
     width: calc(50% + 15px);
+    margin-right: 60px;
   }
 }

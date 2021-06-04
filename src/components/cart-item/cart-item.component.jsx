@@ -32,7 +32,7 @@ const CartItem = ({ name, price, id, quantity, color, size, url, increaseItem, d
             <p className='cart-item__info-container__count-and-price__count__remove' onClick={() => removeItem(item)} >Remove</p>
           </section>
           <p className='cart-item__info-container__count-and-price__x' >x</p>
-          <p className='cart-item__info-container__count-and-price__price' >{price}</p>
+          <p className='cart-item__info-container__count-and-price__price' >US${(price / 100).toFixed(2)}</p>
         </section>
       </section>
     </section>

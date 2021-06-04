@@ -6,7 +6,6 @@ import { selectCollection} from '../../redux/shop/shop.selector';
 import CollectionPreview from '../collection-preview/collection-preview.component';
 
 const CollectionView = ({ collection, match }) => {
-  console.log(match);
   return (
     <CollectionPreview collection={collection} path={match.url} />
   );
