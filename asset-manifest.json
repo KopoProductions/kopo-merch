@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/kopo-merch/static/css/main.ec3f3e5c.chunk.css",
-    "main.js": "/kopo-merch/static/js/main.8a1c2b3f.chunk.js",
-    "main.js.map": "/kopo-merch/static/js/main.8a1c2b3f.chunk.js.map",
+    "main.css": "/kopo-merch/static/css/main.20a80815.chunk.css",
+    "main.js": "/kopo-merch/static/js/main.167b3e93.chunk.js",
+    "main.js.map": "/kopo-merch/static/js/main.167b3e93.chunk.js.map",
     "runtime-main.js": "/kopo-merch/static/js/runtime-main.17a103f1.js",
     "runtime-main.js.map": "/kopo-merch/static/js/runtime-main.17a103f1.js.map",
     "static/css/2.e9aa7207.chunk.css": "/kopo-merch/static/css/2.e9aa7207.chunk.css",
-    "static/js/2.19436aab.chunk.js": "/kopo-merch/static/js/2.19436aab.chunk.js",
-    "static/js/2.19436aab.chunk.js.map": "/kopo-merch/static/js/2.19436aab.chunk.js.map",
+    "static/js/2.d9808885.chunk.js": "/kopo-merch/static/js/2.d9808885.chunk.js",
+    "static/js/2.d9808885.chunk.js.map": "/kopo-merch/static/js/2.d9808885.chunk.js.map",
     "static/js/3.91632357.chunk.js": "/kopo-merch/static/js/3.91632357.chunk.js",
     "static/js/3.91632357.chunk.js.map": "/kopo-merch/static/js/3.91632357.chunk.js.map",
     "index.html": "/kopo-merch/index.html",
     "service-worker.js": "/kopo-merch/service-worker.js",
     "service-worker.js.map": "/kopo-merch/service-worker.js.map",
     "static/css/2.e9aa7207.chunk.css.map": "/kopo-merch/static/css/2.e9aa7207.chunk.css.map",
-    "static/css/main.ec3f3e5c.chunk.css.map": "/kopo-merch/static/css/main.ec3f3e5c.chunk.css.map",
-    "static/js/2.19436aab.chunk.js.LICENSE.txt": "/kopo-merch/static/js/2.19436aab.chunk.js.LICENSE.txt",
+    "static/css/main.20a80815.chunk.css.map": "/kopo-merch/static/css/main.20a80815.chunk.css.map",
+    "static/js/2.d9808885.chunk.js.LICENSE.txt": "/kopo-merch/static/js/2.d9808885.chunk.js.LICENSE.txt",
     "static/media/cart-icon.1082b479.svg": "/kopo-merch/static/media/cart-icon.1082b479.svg",
     "static/media/facebook.cc6bc3ff.svg": "/kopo-merch/static/media/facebook.cc6bc3ff.svg",
     "static/media/hero-slider-1.d1de1ace.png": "/kopo-merch/static/media/hero-slider-1.d1de1ace.png",
@@ -29,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.17a103f1.js",
     "static/css/2.e9aa7207.chunk.css",
-    "static/js/2.19436aab.chunk.js",
-    "static/css/main.ec3f3e5c.chunk.css",
-    "static/js/main.8a1c2b3f.chunk.js"
+    "static/js/2.d9808885.chunk.js",
+    "static/css/main.20a80815.chunk.css",
+    "static/js/main.167b3e93.chunk.js"
   ]
 }
