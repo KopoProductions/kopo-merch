@@ -2,39 +2,41 @@
 
 .instagram {
   background-color: #8C96B9;
-  height: 150px;
+  height: 250px;
   width: 100% ;
   display: flex;
 
   &__container {
     margin: auto 13px auto auto;
-    width: 142px;
-    height: 110px;
+    width: 220px;
+    height: 160px;
     background-color: #FFF;
     text-align: left;
     padding: 4px 12px 14PX;
 
     &__handler {
-      font-size: 9px;
-      margin-bottom: 8px;
+      font-size: 19px;
+      margin-top: 10px;
+      display: inline-block;
     }
 
     &__title {
       font-weight: 600;
-      font-size: 12px;
-      margin-bottom: 3px;
+      font-size: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
       line-height: 16px;
     }
 
     &__sub-title {
-      font-size: 8px;
+      font-size: 13px;
       margin-bottom: 10px;
       font-weight: 400;
     }
 
     &__CTA-container {
-      height: 15px;
-      width: 88px;
+      height: 25px;
+      width: 148px;
     }
 
   }

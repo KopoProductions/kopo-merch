@@ -8,10 +8,11 @@
   &__social-media {
     display: inline-flex;
     flex-direction: column;
+    margin: auto 0;
 
     &__logo {
-      width: 64px;
-      height: 20px;
+      width: 144px;
+      height: 40px;
       margin-bottom: 7px;
     }
 
@@ -29,7 +30,7 @@
   }
 
   &__links-column {
-    display: inline-flex;
+    display: none;
     flex-direction: column;
     text-align: left;
 
@@ -40,6 +41,45 @@
 
     &__link {
       font-size: 6px;
+    }
+  }
+
+  &__accordion {
+    margin-left: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__item {
+      margin-bottom: 20px;
+      text-align: right;
+      width: 80%;
+
+      &__heading {
+
+        &__button {
+          font-size: 30px;
+          border-radius: 0px;
+          box-shadow: 0px 10px 5px -5px rgba($color: #6b6b6b, $alpha: 1.0);
+          border-bottom: 2px solid black;
+          margin-bottom: 10px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__pannel {
+
+        & p {
+          font-size: 20px;
+          margin-top: 5px;
+          margin-left: 5px;
+        }
+      }
     }
   }
 }
@@ -101,6 +141,8 @@
 
     &__links-column {
       margin: auto 0;
+      display: inline-flex;
+
       &__title {
         font-size: 20px;
       }
@@ -108,6 +150,10 @@
       &__link {
         font-size: 15px;
       }
+    }
+
+    &__accordion {
+      display: none;
     }
   }
 }

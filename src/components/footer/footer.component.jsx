@@ -4,6 +4,13 @@ import {ReactComponent as Facebook} from '../../assets/images/facebook.svg';
 import {ReactComponent as Instagram} from '../../assets/images/instagram.svg';
 import {ReactComponent as Pinterest} from '../../assets/images/pinterest.svg';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
 import './footer.styles.scss';
 
 const Footer = () => {
@@ -40,6 +47,40 @@ const Footer = () => {
         <Link to='/' className='footer__links-column__link' >Shop Instagram</Link>
         <Link to='/' className='footer__links-column__link' >Privacy Policy</Link>
       </section>
+    
+      <Accordion className='footer__accordion' allowMultipleExpanded allowZeroExpanded >
+        <AccordionItem className='footer__accordion__item' >
+          <AccordionItemHeading aria-level={3} className='footer__accordion__item__heading' >
+            <AccordionItemButton className='footer__accordion__item__heading__button' >Menu</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel className='footer__accordion__item__pannel' >
+            <p>Blog</p>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+          </AccordionItemPanel>
+        </AccordionItem>
+        <AccordionItem className='footer__accordion__item' >
+          <AccordionItemHeading aria-level={3} className='footer__accordion__item__heading' >
+            <AccordionItemButton className='footer__accordion__item__heading__button' >Company</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel className='footer__accordion__item__pannel' >
+            <p>Shipping & Returns</p>
+            <p>About Us</p>
+            <p>Terms & Conditions</p>
+          </AccordionItemPanel>
+        </AccordionItem>
+        <AccordionItem className='footer__accordion__item' >
+          <AccordionItemHeading aria-level={3} className='footer__accordion__item__heading' >
+            <AccordionItemButton className='footer__accordion__item__heading__button' >Links</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel className='footer__accordion__item__pannel' >
+            <p>IG Repost</p>
+            <p>Shop Instagram</p>
+            <p>Privacy Policy</p>
+          </AccordionItemPanel>
+        </AccordionItem>
+      </Accordion>
+
     </section>
   );
 };
