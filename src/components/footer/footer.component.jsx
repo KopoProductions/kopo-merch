@@ -18,7 +18,7 @@ const Footer = () => {
     <section className='footer' >
       <section className='footer__social-media' >
         <Link to='/' >
-          <img className='footer__social-media__logo'src={logo} />
+          <img className='footer__social-media__logo' src={logo} alt="Kopo's Logo" />
         </Link>
         <section className='footer__social-media__icons-container'>
           <Facebook className='footer__social-media__icons-container__icon' />

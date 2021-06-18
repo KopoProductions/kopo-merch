@@ -1,0 +1,81 @@
+.menu-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  backdrop-filter: blur(5px);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__container {
+    position: fixed;
+    left: 0;
+    background-color: #FFF;
+    height: 100vh;
+    width: 90%;
+    max-width: 300px;
+    
+    &:hover {
+      cursor: default;
+    }
+
+    &__top {
+      padding: 25px;
+      display: flex;
+      height: 10vh;
+      width: 100%;
+      justify-content: space-between;
+
+      &__title {
+        height: 40px;
+        margin: 2.5px 0 0;
+        width: 126px;
+      }
+    }
+
+    &__center {
+      &__accordion {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+
+        &__item {
+          margin-bottom: 20px;
+          width: 80%;
+    
+          &__heading {
+    
+            &__button {
+              text-transform: uppercase;
+              font-size: 1.3rem;
+              border-bottom: 1px solid black;
+              margin-bottom: 10px;
+    
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+    
+          &__pannel {
+    
+            & p {
+              font-size: 20px;
+              margin-top: 5px;
+              margin-left: 5px;
+    
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

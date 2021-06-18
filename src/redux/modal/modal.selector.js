@@ -1,8 +1,13 @@
 import { createSelector } from 'reselect';
 
-const selectCartModal = state => state.cartModal;
+const selectCartModal = state => state.modal;
 
 export const selectCartModalIsOpen = createSelector(
   [selectCartModal],
-  (cartModal) => cartModal.cartModalIsOpen
+  (modal) => modal.cartModalIsOpen
+);
+
+export const selectMenuModalIsOpen = createSelector(
+  [selectCartModal],
+  (modal) => modal.menuModalIsOpen
 );
