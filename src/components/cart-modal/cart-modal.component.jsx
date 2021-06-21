@@ -5,7 +5,7 @@ import CTA from '../CTA/CTA.component';
 import './cart-modal.styles.scss';
 import CartItem from '../cart-item/cart-item.component';
 
-import { openCartModal, closeCartModal } from '../../redux/modal/modal.actions';
+import { closeCartModal } from '../../redux/modal/modal.actions';
 import { selectCartContent, selectCartContentTotalPrice } from '../../redux/cart/cart.selector';
 
 const CartModal = ({ closeCartModal, cartContent, totalPrice, history }) => {
@@ -43,7 +43,6 @@ const CartModal = ({ closeCartModal, cartContent, totalPrice, history }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  openCartModal: () => dispatch(openCartModal()),
   closeCartModal: () => dispatch(closeCartModal())
 });
 

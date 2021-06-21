@@ -13,7 +13,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-  cartModal: modalReducer,
+  modal: modalReducer,
   cart: cartReducer,
   shop: shopReducer
 });
